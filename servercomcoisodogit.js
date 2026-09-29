@@ -5,7 +5,7 @@ servidor.use(express.json());
 servidor.get('/', (req, res) => {
     res.send('ta funcionando se pa')
 })
-
+// Marcos esteve ayqu
 
 servidor.post('/steam', (req, res) => {
     steam.push(req.body)
