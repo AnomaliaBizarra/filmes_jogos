@@ -1,0 +1,33 @@
+###
+GET http://localhost:3067/
+
+###
+
+GET http://localhost:3067/steam
+
+### 
+
+### 
+
+POST http://localhost:3067/steam
+Content-Type: application/json
+
+{
+    "nome": "ori and the call of the wisps",
+    "preco": "12,50",
+    "nota": "5"
+}
+
+###
+GET http://localhost:3067/anime
+
+###
+
+POST http://localhost:3067/anime
+Content-Type: application/json
+
+{
+    "nome": "abc",
+    "avaliacao": "5"
+}
+

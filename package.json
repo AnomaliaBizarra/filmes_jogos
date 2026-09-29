@@ -1,0 +1,16 @@
+{
+  "name": "reactive-atividade-resenha",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "servercomcoisodogit.js",
+  "scripts": {
+    "start": "node --watch servercomcoisodogit.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
