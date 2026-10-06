@@ -19,11 +19,11 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3067/anime
+GET http://localhost:3067/serie
 
 ###
 
-POST http://localhost:3067/anime
+POST http://localhost:3067/serie
 Content-Type: application/json
 
 {

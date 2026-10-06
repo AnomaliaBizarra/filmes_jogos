@@ -19,14 +19,14 @@ servidor.get('/steam', (req, res) => {
     res.send(steam)
 })
 
-servidor.post('/anime', (req, res) => {
-    anime.push(req.body)
-    res.send('anime cadastrado!')
+servidor.post('/serie', (req, res) => {
+    serie.push(req.body)
+    res.send('serie cadastrado!')
 })
 
-const anime = []
-servidor.get('/anime', (req, res) => {
-    res.send(anime)
+const serie = []
+servidor.get('/serie', (req, res) => {
+    res.send(serie)
 })
 
 

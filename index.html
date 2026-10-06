@@ -1,10 +1,77 @@
 <h1>Biblioteca de midias sociais</h1>
 
-<button onclick="buscar()">buscar midia</button>
+
+<input type="text" placeholder="nome do jogo" id="nome">
+<hr>
+<input type="text" placeholder="preco" id="preco">
+<hr>
+<input type="text" placeholder="nota" id="nota">
+<br>
+
+<button onclick="cadastrar()">cadastrar</button>
+<button onclick="buscar()">buscar jogo</button>
+<hr>
+<br>
+<br>
+
+<input type="text" placeholder="nome do anime" id="nome2">
+<hr>
+<input type="text" placeholder="nota2" id="nota2">
+<br>
+<button onclick="cadastrar2()">cadastrar serie</button>
+<button onclick="buscarserie()">buscar serie</button>
+
+
 
 <script>
+
+    async function cadastrar() {
+
+        const nome = document.getElementById('nome').value
+        const preco = document.getElementById('preco').value
+        const nota = document.getElementById('nota').value
+
+        const jogo = {
+            nome, preco, nota
+        }
+
+        const steam = await fetch('http://localhost:3067/steam', {
+            method: 'POST',
+            body: JSON.stringify(jogo),
+            headers: {
+               'Content-Type': 'application/json'
+            }
+        })
+    }
+
+    async function cadastrar2() {
+
+        const nome2 = document.getElementById('nome2').value
+        const nota2 = document.getElementById('nota2').value
+
+
+
+        const serie = {
+            nome2, nota2
+        }
+
+         const anime = await fetch('http://localhost:3067/serie', {
+            method: 'POST',
+            body: JSON.stringify(serie),
+            headers: {
+               'Content-Type': 'application/json'
+            }
+        })
+
+    }
+
     async function buscar() {
         const steam = await fetch('http://localhost:3067/steam')
         alert('a')
+    }
+
+    async function buscarserie() {
+        const serie = await fetch('http://localhost:3067/serie')
+        alert(nome2, nota2)
     }
 </script>
